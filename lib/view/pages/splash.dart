@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:odc_project/modules/login.dart';
+import 'package:odc_project/view/pages/login.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -57,7 +57,7 @@ class _SplashScreenState extends State<SplashScreen> {
               linearStrokeCap: LinearStrokeCap.round,
               animation: true,
               animationDuration: 1000,
-              lineHeight: 20.0,
+              lineHeight: 10.0,
               percent: 1,
               progressColor: Colors.orange,
 

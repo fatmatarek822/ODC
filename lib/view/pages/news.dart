@@ -9,12 +9,14 @@ class NewsScreen extends StatelessWidget {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 60,bottom: 20),
-            child: Text('News',style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 30,
-              color: Colors.black
-            ),),
+            padding: const EdgeInsets.only(top: 60, bottom: 20),
+            child: Text(
+              'News',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                  color: Colors.black),
+            ),
           ),
           Stack(
             children: [
@@ -23,7 +25,9 @@ class NewsScreen extends StatelessWidget {
                 child: Container(
                   width: double.infinity,
                   height: 200,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.grey[350]),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.grey[350]),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,7 +41,8 @@ class NewsScreen extends StatelessWidget {
                       ),
                       Text(
                         'Digital Center',
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 25),
                       ),
                     ],
                   ),
@@ -52,19 +57,28 @@ class NewsScreen extends StatelessWidget {
                     height: 40,
                     decoration: BoxDecoration(
                         color: Colors.orange,
-                        borderRadius: BorderRadiusDirectional.circular(20)
-                    ),
+                        borderRadius: BorderRadiusDirectional.circular(20)),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        IconButton(onPressed: (){}, icon: Icon(Icons.share, color: Colors.white,size: 20,),),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.share,
+                            color: Colors.white,
+                            size: 20,
+                          ),
+                        ),
                         VerticalDivider(
                           width: 1,
                           indent: 5,
                           endIndent: 5,
                           color: Colors.white,
                         ),
-                        IconButton(onPressed: (){}, icon: Icon(Icons.copy, color: Colors.white,size: 20),),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.copy, color: Colors.white, size: 20),
+                        ),
                       ],
                     ),
                   ),
@@ -74,16 +88,30 @@ class NewsScreen extends StatelessWidget {
                 top: 20,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20),
-                  child: Text('ODC', style: TextStyle(color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold,),),
-                ),),
+                  child: Text(
+                    'ODC',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
               Positioned(
-               bottom: 20,
+                bottom: 20,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20),
-                  child: Text('ODC Supports All Universties', style: TextStyle(color: Colors.white, fontSize: 15,fontWeight: FontWeight.bold,),),
-                ),),
-
-
+                  child: Text(
+                    'ODC Supports All Universties',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ],
