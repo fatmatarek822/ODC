@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:odc_project/view/components/core/core_components.dart';
+import 'package:odc_project/view/components/pages_components/setting_components.dart';
+import 'package:odc_project/view/pages/faq.dart';
+import 'package:odc_project/view/pages/our_partners.dart';
+import 'package:odc_project/view/pages/support.dart';
+import 'package:odc_project/view/pages/terms_condition.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);
@@ -21,76 +27,36 @@ class SettingsScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Column(
-        children: const [
-          ListTile(
-            title: Text(
-              'FAQ',
-            ),
-            trailing: Icon(
-              Icons.arrow_forward_ios,
-              size: 22,
-            ),
-          ),
-          Divider(
-            height: 1,
-            indent: 15,
-            endIndent: 15,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text(
-              'Terms & Conditions',
-            ),
-            trailing: Icon(
-              Icons.arrow_forward_ios,
-              size: 22,
-            ),
-          ),
-          Divider(
-            height: 1,
-            indent: 15,
-            endIndent: 15,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text(
-              'Our Partners',
-            ),
-            trailing: Icon(
-              Icons.arrow_forward_ios,
-              size: 22,
-            ),
-          ),
-          Divider(
-            height: 1,
-            indent: 15,
-            endIndent: 15,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text(
-              'Support',
-            ),
-            trailing: Icon(
-              Icons.arrow_forward_ios,
-              size: 22,
-            ),
-          ),
-          Divider(
-            height: 1,
-            indent: 15,
-            endIndent: 15,
-            color: Colors.black26,
-          ),
-          ListTile(
-            title: Text(
-              'Log out',
-            ),
-            trailing: Icon(
-              Icons.arrow_forward_ios,
-              size: 22,
-            ),
-          ),
+        children: [
+
+          InkWell(
+            onTap: ()
+            {
+              navigateTo(context, FAQScreen());
+            },
+              child: DefaultListTile(text: 'FAQ')),
+          divider(),
+          InkWell( onTap: ()
+          {
+            navigateTo(context, TermsAndCondition());
+          },child: DefaultListTile(text: 'Terms & Conditions')),
+          divider(),
+          InkWell(
+            onTap: ()
+            {
+              navigateTo(context, OurPartnerScreen());
+            },
+              child: DefaultListTile(text: 'Our Partners')),
+          divider(),
+          InkWell(
+              onTap: ()
+              {
+                navigateTo(context, SupportScreen());
+              },
+              child: DefaultListTile(text: 'Support')),
+          divider(),
+          DefaultListTile(text: 'Log Out'),
+
         ],
       ),
     );

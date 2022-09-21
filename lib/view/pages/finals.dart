@@ -2,28 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:odc_project/view/components/core/core_components.dart';
 import 'package:odc_project/view/pages/layout.dart';
-import 'package:odc_project/view_model/cubit/midterm/midterm_cubit.dart';
-import 'package:odc_project/view_model/cubit/midterm/midterm_state.dart';
+import 'package:odc_project/view_model/cubit/finals/final_cubit.dart';
+import 'package:odc_project/view_model/cubit/finals/final_state.dart';
 
-class MidtermsScreen extends StatelessWidget {
-  const MidtermsScreen({Key? key}) : super(key: key);
+class FinalsScreen extends StatelessWidget {
+  const FinalsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => MidtermCubit(),
-      child: BlocConsumer<MidtermCubit, MidtermState>(
+      create: (context) => FinalCubit(),
+      child: BlocConsumer<FinalCubit, FinalState>(
         listener: (context, state){},
         builder: (context, state)
         {
-          MidtermCubit cubit = MidtermCubit.get(context);
+          FinalCubit cubit = FinalCubit.get(context);
 
           return Scaffold(
             appBar: AppBar(
               backgroundColor: Colors.white,
               centerTitle: true,
               title: const Text(
-                'Midterm',
+                'Finals',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 25,

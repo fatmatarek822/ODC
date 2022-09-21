@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:odc_project/view/components/core/core_components.dart';
+import 'package:odc_project/view/pages/add_note.dart';
 
 class NoteScreen extends StatelessWidget {
   const NoteScreen({Key? key}) : super(key: key);
@@ -9,12 +11,23 @@ class NoteScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.white,
-        leading: Icon(Icons.arrow_back_ios_rounded,color: Colors.black,),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios,
+              color: Colors.orange,
+            )),
         title: Text('Add Note',style: TextStyle(color: Colors.black, fontSize: 22, fontWeight: FontWeight.bold),),
       ),
 
       body: Center(child: Text('There\'s No Data To Show'),),
-      floatingActionButton: FloatingActionButton(onPressed: (){}, child: Icon(Icons.add),backgroundColor: Colors.grey,),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          navigateTo(context, AddNote());
+        },
+        child: Icon(Icons.add),backgroundColor: Colors.grey,),
     );
   }
 }

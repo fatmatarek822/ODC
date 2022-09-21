@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:odc_project/view/components/core/core_components.dart';
+import 'package:odc_project/view/pages/layout.dart';
 
 class SupportScreen extends StatelessWidget {
   const SupportScreen({Key? key}) : super(key: key);
@@ -8,7 +10,14 @@ class SupportScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Icon(Icons.arrow_back_ios_new, color: Colors.black,),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.orange,
+          ),),
         title: Text('Support', style: TextStyle(fontSize: 25, color: Colors.black),),
         centerTitle: true,
       ),

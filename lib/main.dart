@@ -18,7 +18,8 @@ import 'package:odc_project/view/pages/support.dart';
 import 'package:odc_project/view_model/network/dio_helper.dart';
 
 Future<void> main() async{
-//  WidgetsFlutterBinding.ensureInitialized();
+
+  WidgetsFlutterBinding.ensureInitialized();
   await DioHelper.init();
   runApp(const MyApp());
 }
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: LayoutScreen(),
     );
   }
 }

@@ -2,27 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:odc_project/view/components/core/core_components.dart';
 import 'package:odc_project/view/pages/layout.dart';
-import 'package:odc_project/view_model/cubit/section/section_cubit.dart';
-import 'package:odc_project/view_model/cubit/section/section_state.dart';
+import 'package:odc_project/view_model/cubit/lectures/lectures_cubit.dart';
+import 'package:odc_project/view_model/cubit/lectures/lectures_state.dart';
 
-class SectionScreen extends StatelessWidget {
-  const SectionScreen({Key? key}) : super(key: key);
+class LecturesScreen extends StatelessWidget {
+  const LecturesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => SectionCubit(),
-      child: BlocConsumer<SectionCubit, SectionState>(
+      create: (context) => LecturesCubit(),
+      child: BlocConsumer<LecturesCubit, LecturesState>(
         listener: (context, state){},
-        builder: (context, state){
-
-
-          return  Scaffold(
+        builder: (context, state)
+        {
+          LecturesCubit cubit = LecturesCubit.get(context);
+          return Scaffold(
             appBar: AppBar(
               backgroundColor: Colors.white,
               centerTitle: true,
               title: const Text(
-                'Sections',
+                'Lectures',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 25,
@@ -77,6 +77,7 @@ class SectionScreen extends StatelessWidget {
             ),
           );
         },
+
       ),
     );
   }

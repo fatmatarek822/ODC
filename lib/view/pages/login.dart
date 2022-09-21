@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     OrangeText(),
-                    SizedBox(
+                    const SizedBox(
                       height: 60,
                     ),
                     Column(
@@ -78,15 +78,11 @@ class LoginScreen extends StatelessWidget {
                         const SizedBox(
                           height: 40,
                         ),
-
-
                         DefaultElvatedButton(
                             text: 'Login', ontap: ()
                         {
                            cubit.LoginEmail();
                         }),
-
-
                         const SizedBox(
                           height: 20,
                         ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:odc_project/view/components/core/core_components.dart';
+import 'package:odc_project/view/pages/layout.dart';
 
 class OurPartnerScreen extends StatelessWidget {
   const OurPartnerScreen({Key? key}) : super(key: key);
@@ -8,7 +10,14 @@ class OurPartnerScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Icon(Icons.arrow_back_ios_new_rounded, color: Colors.orange,),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios,
+              color: Colors.orange,
+            ),),
         centerTitle: true,
         title: Text('Our Partners', style: TextStyle(
           fontSize: 22,
